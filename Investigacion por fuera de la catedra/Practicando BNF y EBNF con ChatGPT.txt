@@ -1,0 +1,30 @@
+Para EBNF: 
+[] es opcional
+* indica 0 o mas veces
++ indica 1 o mas veces
+
+
+Ejercicios: 
+
+- Gramatica para operaciones aritméticas sin prioridad:
+Debe ser posible realizar mas de una operación: por ejemplo 4+2*8
+
+BNF: 
+
+<expresion>:= <operando> <operador> <expresión> | <operando> 
+<operador>:= + , - , * , /  
+<operando>::= <digito> | <digito> <operando>
+<digito>::= 0 | 1 | 2 |.. 9
+
+
+EBNF: 
+
+<expresion>::= <operando> { <operador> <operando> }*   
+<operador>::= "+","-","/","*"
+<operando>:== {digito}+  
+<digito>::= 0 | 1 | 2 | .. | 9
+
+
+
+ 
+
